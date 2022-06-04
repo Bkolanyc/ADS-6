@@ -4,10 +4,10 @@
 
 template<typename T, int size>
 class TPQueue {
-private:
+ private:
     T a[size] = { 0 };
     int last, first;
-public:
+ public:
     void push(T x) {
         int i = last;
         for (; (i >= first) && a[i % size].prior < x.prior; --i) {
